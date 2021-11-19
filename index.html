@@ -10,28 +10,40 @@
         <script>
 
             //computerPlay randomly selects either Rock, Paper or Scissors and stores that value as computerSelection ---> if there are errors here maybe this needs to be stored as a string?
-
-            let myArray = [
-            "rock",
-            "paper",
-            "scissors",
-          ]
-           let computerSelection=myArray[Math.floor(Math.random()*myArray.length)]
-           let playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
-           let playerSelection = playerSelection1.toLowerCase()
-           let playerScore = 0;
+           
+            
+        
         
            //Playround function shows all possible win/lose options ---> do you have to use == or ===??
 
-           //what to do if there is a draw?
 
-           //currently undefined error because there is not yet a player input
+           function playRound() {
+               
+            function computerPlay(){
+               
+               const myArray = [
+                       "rock",
+                       "paper",
+                       "scissors",]
+           
+               const computerSelection=myArray[Math.floor(Math.random()*myArray.length)]
+               return computerSelection
+           }
+   
+               console.log(computerPlay())
 
-           function playRound(playerSelection, computerSelection) {
+        //playerPlay prompts the user to enter a value
+            function playerPlay(){
+                let playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
+                let playerSelection = playerSelection1.toLowerCase()
+                return playerSelection
 
-               //if (playerSelection!="rock" ||  playerSelection!=="paper" || playerSelection!==="scissors")
-                  //  return 'error, try again. enter Rock, Paper or Scissors'
+               }
+            console.log('PLAYER PLAY IS '+playerPlay())
         
+
+             
+
             if (playerSelection===computerSelection){
                    return 'Draw, play again'}
                
@@ -52,11 +64,7 @@
             
                }
 
-            //console.log("player says "+playerSelection)
-            //console.log("computer says "+computerSelection)
-           //console.log(playRound('rock', 'scissors'))
-           //console.log(playerScore)
-          // alert(playerScore)
+console.log(playRound())
         
     
            
