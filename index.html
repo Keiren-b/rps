@@ -36,9 +36,9 @@ let playerScore = 0
                 let playerSelection = playerPlay()
                 let computerSelection = computerPlay()
                 
-
             if (playerSelection===computerSelection){
-                   return 'Draw, play again'}
+                   return 'Draw, play again'
+                   }
                
                 else if ((computerSelection==="rock" && playerSelection==="scissors")
                || (computerSelection==="scissors" && playerSelection==="paper")
@@ -46,13 +46,14 @@ let playerScore = 0
                
             {
                    return 'You Lose! ' + computerSelection + ' beats ' + playerSelection;
-            
+                    
                 }
 
                
                 else {
-                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;}
-               }
+                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
+    
+               }}
 
 
 //****this code adds 1 to the score if the player wins
@@ -64,29 +65,43 @@ let playerScore = 0
 function game (){
  return playRound()
 }
-
-console.log (game())       
-
-function game (){
-    return playRound()
-}
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1}
 console.log (game())   
+// console.log ('current score is' +playerScore)
 
-function game (){
-    return playRound()
-}
-console.log (game())   
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
 
-function game (){
-    return playRound()
-}
-console.log (game())   
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
 
-function game (){
- return playRound()
-}
-console.log (game())
-           
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
           
         </script>
 
