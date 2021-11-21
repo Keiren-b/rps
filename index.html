@@ -21,7 +21,6 @@
                return computerSelection
            }
    
-               console.log('computer selects '+computerPlay())
 
                function playerPlay(){
                let playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
@@ -33,8 +32,8 @@
          
            function playRound() {
 
-                let playerSelection=playerPlay()
-                let computerSelection='scissors'
+                let playerSelection = playerPlay()
+                let computerSelection = computerPlay()
 
             if (playerSelection===computerSelection){
                    return 'Draw, play again'}
