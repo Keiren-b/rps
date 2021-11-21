@@ -34,6 +34,7 @@
 
                 let playerSelection = playerPlay()
                 let computerSelection = computerPlay()
+                let playerScore = 0
 
             if (playerSelection===computerSelection){
                    return 'Draw, play again'}
@@ -49,12 +50,37 @@
 
                
                 else {
-                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;}
+                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
+                playerScore = playerscore + 1
+                return playerScore}
                }
-        console.log(playRound())
-        
-    
-           
+
+function game (){
+    return playRound()
+    return playerScore
+
+}
+console.log (game())
+      
+function game (){
+    return playRound()
+}
+console.log (game())       
+
+function game (){
+    return playRound()
+}
+console.log (game())   
+
+function game (){
+    return playRound()
+}
+console.log (game())   
+
+function game (){
+    return playRound()
+}
+console.log (game())   
 
            
           
