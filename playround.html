@@ -9,21 +9,7 @@
     </body>
         <script>
 
-            //computerPlay randomly selects either Rock, Paper or Scissors and stores that value as computerSelection ---> if there are errors here maybe this needs to be stored as a string?
-            function computerPlay(){
-               
-               const myArray = [
-                       "rock",
-                       "paper",
-                       "scissors",]
-           
-               const computerSelection=myArray[Math.floor(Math.random()*myArray.length)]
-               return computerSelection
-           }
-   
-               console.log('computer selects '+computerPlay())
-
-               function playerPlay(){
+            function playerPlay(){
                let playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
                let playerSelection = playerSelection1.toLowerCase()
                return playerSelection//return must be there i think
@@ -52,10 +38,9 @@
                 else {
                 return 'You Win! ' + playerSelection + ' beats ' + computerSelection;}
                }
-        console.log(playerPlay())
-        console.log(playRound())
         
-    
+        console.log(playRound())
+
            
 
            
