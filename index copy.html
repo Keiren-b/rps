@@ -1,19 +1,111 @@
-function game (){
-    return playRound()
-}
-console.log (game())       
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+        
+    </head>
 
-function game (){
-    return playRound()
-}
-console.log (game())   
+    </body>
+        <script>
+            
+let playerScore = 0
+            //computerPlay randomly selects either Rock, Paper or Scissors and stores that value as computerSelection ---> if there are errors here maybe this needs to be stored as a string?
+            function computerPlay(){
+               
+               const myArray = [
+                       "rock",
+                       "paper",
+                       "scissors",]
+           
+               const computerSelection=myArray[Math.floor(Math.random()*myArray.length)]
+               return computerSelection
+           }
+   
 
-function game (){
-    return playRound()
-}
-console.log (game())   
+               function playerPlay(){
+               let playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
+               let playerSelection = playerSelection1.toLowerCase()
+               return playerSelection//return must be there i think
+               //do not console log at this point
 
-function game (){
-    return playRound()
-}
-console.log (game())   
+              }
+         
+           function playRound() {
+
+                let playerSelection = playerPlay()
+                let computerSelection = computerPlay()
+                
+
+            if (playerSelection===computerSelection){
+                   return 'Draw, play again'}
+               
+                else if ((computerSelection==="rock" && playerSelection==="scissors")
+               || (computerSelection==="scissors" && playerSelection==="paper")
+               || (computerSelection==="paper" && playerSelection==="rock"))
+               
+            {
+                   return 'You Lose! ' + computerSelection + ' beats ' + playerSelection;
+            
+                }
+
+               
+                else {
+                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;}
+               }
+
+function game(){
+    playRound()}
+
+if (playRound().includes('Win')){
+playerScore=playerScore+1} 
+
+ //console.log (game())
+
+console.log (playerScore)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+// function game (){
+//  return playRound()
+// }
+// console.log (game())       
+
+// function game (){
+//     return playRound()
+// }
+// console.log (game())   
+
+// function game (){
+//     return playRound()
+// }
+// console.log (game())   
+
+// function game (){
+//     return playRound()
+// }
+// console.log (game())   
+
+// function game (){
+//  return playRound()
+// }
+// console.log (game())
+           
+          
+        </script>
+
+    </body>
+
+</html>

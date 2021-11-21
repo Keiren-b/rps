@@ -8,7 +8,8 @@
 
     </body>
         <script>
-
+            
+let playerScore = 0
             //computerPlay randomly selects either Rock, Paper or Scissors and stores that value as computerSelection ---> if there are errors here maybe this needs to be stored as a string?
             function computerPlay(){
                
@@ -34,7 +35,7 @@
 
                 let playerSelection = playerPlay()
                 let computerSelection = computerPlay()
-                let playerScore = 0
+                
 
             if (playerSelection===computerSelection){
                    return 'Draw, play again'}
@@ -50,21 +51,20 @@
 
                
                 else {
-                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
-                playerScore = playerscore + 1
-                return playerScore}
+                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;}
                }
 
-function game (){
-    return playRound()
-    return playerScore
 
-}
-console.log (game())
+//****this code adds 1 to the score if the player wins
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (playerScore)
+//****however it seems to recall the prompt box on line 27 so instead of having 5 rounds we have more
       
 function game (){
-    return playRound()
+ return playRound()
 }
+
 console.log (game())       
 
 function game (){
@@ -82,6 +82,10 @@ function game (){
 }
 console.log (game())   
 
+function game (){
+ return playRound()
+}
+console.log (game())
            
           
         </script>
