@@ -51,7 +51,8 @@ let playerScore = 0
 
                
                 else {
-                return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
+                return 'You Win! ' + playerSelection + ' beats ' + computerSelection +'. Current score is '+playerScore+1;
+                playerScore=playerScore+1
     
                }}
 
@@ -65,10 +66,11 @@ let playerScore = 0
 function game (){
  return playRound()
 }
-// if (playRound().includes('Win')){
-// playerScore=playerScore+1}
-console.log (game())   
-// console.log ('current score is' +playerScore)
+console.log(game())
+if (playRound().includes('Win')){
+playerScore=playerScore+1}
+ 
+console.log ('current score is' +playerScore)
 
 // function game (){
 //  return playRound()
