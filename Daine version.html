@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+        
+    </head>
+
+    </body>
+        <script>
+            
+let playerScore = 0
+            //computerPlay randomly selects either Rock, Paper or Scissors and stores that value as computerSelection ---> if there are errors here maybe this needs to be stored as a string?
+            function computerPlay(){
+               
+               const myArray = [
+                       "rock",
+                       "paper",
+                       "scissors",]
+           
+               return myArray[Math.floor(Math.random()*myArray.length)]
+               
+           }
+   
+
+               function playerPlay(){
+                    playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
+                    return playerSelection1.toLowerCase()
+                    //return must be there i think
+                    //do not console log at this point
+
+              }
+         
+           function playRound() {
+
+           
+
+                let playerSelection = playerPlay()
+                let computerSelection = computerPlay()
+                
+            if (playerSelection===computerSelection){
+                   console.log('Draw, play again')
+                   return playRound()
+                   }
+               
+                else if ((computerSelection==="rock" && playerSelection==="scissors")
+               || (computerSelection==="scissors" && playerSelection==="paper")
+               || (computerSelection==="paper" && playerSelection==="rock"))
+               
+            {
+                console.log('You Lose! ' + computerSelection + ' beats ' + playerSelection +'. Current score is ' + playerScore);
+                    
+                }
+
+               
+                else {
+                playerScore=playerScore+1
+                console.log('You Win! ' + playerSelection + ' beats ' + computerSelection +'. Current score is '+playerScore);
+                
+    
+               }}
+
+
+//****this code adds 1 to the score if the player wins
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (playerScore)
+//****however it seems to recall the prompt box on line 27 so instead of having 5 rounds we have more
+      
+function game (){
+ return playRound()
+}
+
+game();
+game();
+game();
+game();
+game();
+
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
+// function game (){
+//  return playRound()
+// }
+// if (playRound().includes('Win')){
+// playerScore=playerScore+1} 
+// console.log (game())   
+// console.log (playerScore)
+
+          
+        </script>
+
+    </body>
+
+</html>
