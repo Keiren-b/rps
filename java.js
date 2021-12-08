@@ -2,7 +2,7 @@ let playerScore = 0
 
             //computerPlay randomly selects either Rock, Paper or Scissors 
 
-            function computerPlay(){
+            const computerSelection = function computerPlay(){
                
                const myArray = [
                        "rock",
@@ -13,19 +13,19 @@ let playerScore = 0
                }
    
            //playerPlay asks for an imput through the prompt box
-               function playerPlay(){
-                    playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
-                    return playerSelection1.toLowerCase()
-                }
+            //    function playerPlay(){
+            //         playerSelection1 = prompt('Enter Rock, Paper or Scissors', )
+            //         return playerSelection1.toLowerCase()
+            //     }
          
             //playRound plays 1 round of the game and console logs the result. If you win, 1 point is added to playerScore
-           function playRound() {
-                let playerSelection = playerPlay()
-                let computerSelection = computerPlay()
+           function playRound(playerSelection, computerSelection) {
+                // let playerSelection = playerPlay()
+                // let computerSelection = computerPlay()
                 
             if (playerSelection===computerSelection){
                    console.log('Draw, play again')
-                   return playRound()
+                //    return playRound()
                    }
                
                 else if ((computerSelection==="rock" && playerSelection==="scissors")
@@ -44,7 +44,9 @@ let playerScore = 0
                }
             }
         const btn = document.querySelector('#btn')
-        btn.addEventListener('click', playRound)
+        btn.addEventListener('click', (event) => {
+            playRound('rock', computerSelection())
+        })
    
 // function game (){
 //  return playRound()
