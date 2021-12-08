@@ -43,10 +43,22 @@ let playerScore = 0
                 console.log('You Win! ' + playerSelection + ' beats ' + computerSelection +'. Current score is '+playerScore);
                }
             }
-        const btn = document.querySelector('#btn')
-        btn.addEventListener('click', (event) => {
+        const btn1 = document.querySelector('#btn1')
+        btn1.addEventListener('click', (event) => {
             playRound('rock', computerSelection())
         })
+
+        const btn2 = document.querySelector('#btn2')
+        btn2.addEventListener('click', (event) => {
+            playRound('paper', computerSelection())
+        })
+
+        const btn3 = document.querySelector('#btn3')
+        btn3.addEventListener('click', (event) => {
+            playRound('scissors', computerSelection())
+        })
+
+
    
 // function game (){
 //  return playRound()
