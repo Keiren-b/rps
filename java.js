@@ -1,4 +1,5 @@
 let playerScore = 0
+let computerScore = 0
 
             //computerPlay randomly selects either Rock, Paper or Scissors 
 
@@ -22,10 +23,18 @@ let playerScore = 0
            function playRound(playerSelection, computerSelection) {
                 // let playerSelection = playerPlay()
                 // let computerSelection = computerPlay()
-                
-            if (playerSelection===computerSelection){
-                   console.log('Draw, play again')
-                //    return playRound()
+
+                if (playerScore==5){
+                    div.textContent = "YOU WIN!!"
+                }
+
+                else if (computerScore==5){
+                    div.textContent = "YOU LOSE!!"
+                }
+                else if (playerSelection===computerSelection){
+                  
+                div.textContent = "Draw, play again. Current score is...Player Score: " + playerScore + '. Computer Score: ' + computerScore
+                                //    return playRound()
                    }
                
                 else if ((computerSelection==="rock" && playerSelection==="scissors")
@@ -33,33 +42,50 @@ let playerScore = 0
                || (computerSelection==="paper" && playerSelection==="rock"))
                
             {
-                console.log('You Lose! ' + computerSelection + ' beats ' + playerSelection +'. Current score is ' + playerScore);
+                computerScore = computerScore + 1
+                div.textContent = 'You Lose! ' + computerSelection + ' beats ' + playerSelection + '. Current score is...Player Score: ' + playerScore + ". Computer Score: " + computerScore
                     
                 }
 
                
                 else {
                 playerScore=playerScore+1
-                console.log('You Win! ' + playerSelection + ' beats ' + computerSelection +'. Current score is '+playerScore);
+                div.textContent = 'You Win! ' + playerSelection + ' beats ' + computerSelection + '. Current score is...Player Score: ' + playerScore + ". Computer Score: " + computerScore
                }
             }
+
+const container = document.querySelector('#container')            
+
         const btn1 = document.querySelector('#btn1')
-        btn1.addEventListener('click', (event) => {
+        btn1.addEventListener('click', (e) => {           
             playRound('rock', computerSelection())
         })
+    
+    
 
         const btn2 = document.querySelector('#btn2')
-        btn2.addEventListener('click', (event) => {
+        btn2.addEventListener('click', (e) => {
             playRound('paper', computerSelection())
         })
 
         const btn3 = document.querySelector('#btn3')
-        btn3.addEventListener('click', (event) => {
+        btn3.addEventListener('click', (e) => {
             playRound('scissors', computerSelection())
+
         })
 
+const div = document.createElement('div');
+container.appendChild(div)
 
-   
+// if (playerScore = 5){
+//     div.textContent = "You Win the Game!!!"
+
+// }
+// if (computerScore = 5){
+//     div.textContent = "You Lose the Game"
+// }
+
+
 // function game (){
 //  return playRound()
 // }
@@ -70,10 +96,10 @@ let playerScore = 0
 // game();
 // game();
 
-//this calculates the final result of 5 games
+// //this calculates the final result of 5 games
 // if (playerScore >=3){
-//     console.log ('You win the game. Your final score is ' + playerScore + ' wins out of 5 games')
+//     div.textContent = 'You win the game. Your final score is ' + playerScore + ' wins out of 5 games'
 // }
 // else {
-//     console.log ('You lose the game. Your final score is ' + playerScore + ' wins out of 5 games')
+//     div.textContent = 'You lose the game. Your final score is ' + playerScore + ' wins out of 5 games'
 // }
