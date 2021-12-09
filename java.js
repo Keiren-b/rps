@@ -85,29 +85,3 @@ const container = document.querySelector('#container')
 const div = document.createElement('div');
 container.appendChild(div)
 
-// if (playerScore = 5){
-//     div.textContent = "You Win the Game!!!"
-
-// }
-// if (computerScore = 5){
-//     div.textContent = "You Lose the Game"
-// }
-
-
-// function game (){
-//  return playRound()
-// }
-
-// game();
-// game();
-// game();
-// game();
-// game();
-
-// //this calculates the final result of 5 games
-// if (playerScore >=3){
-//     div.textContent = 'You win the game. Your final score is ' + playerScore + ' wins out of 5 games'
-// }
-// else {
-//     div.textContent = 'You lose the game. Your final score is ' + playerScore + ' wins out of 5 games'
-// }
