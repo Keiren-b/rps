@@ -24,14 +24,8 @@ let computerScore = 0
                 // let playerSelection = playerPlay()
                 // let computerSelection = computerPlay()
 
-                if (playerScore==5){
-                    div.textContent = "YOU WIN!!"
-                }
-
-                else if (computerScore==5){
-                    div.textContent = "YOU LOSE!!"
-                }
-                else if (playerSelection===computerSelection){
+          
+                if (playerSelection===computerSelection){
                   
                 div.textContent = "Draw, play again. Current score is...Player Score: " + playerScore + '. Computer Score: ' + computerScore
                                 //    return playRound()
@@ -52,27 +46,41 @@ let computerScore = 0
                 playerScore=playerScore+1
                 div.textContent = 'You Win! ' + playerSelection + ' beats ' + computerSelection + '. Current score is...Player Score: ' + playerScore + ". Computer Score: " + computerScore
                }
+
+               if (playerScore==5){
+                div.textContent = "YOU WIN!!! Score is...Player Score: " + playerScore + ". Computer Score: " + computerScore;
+                
+                
+            }
+
+            else if (computerScore==5){
+                div.textContent = "YOU LOSE!! Score is...Player Score: " + playerScore + ". Computer Score: " + computerScore;
+                
+            }
             }
 
 const container = document.querySelector('#container')            
 
         const btn1 = document.querySelector('#btn1')
-        btn1.addEventListener('click', (e) => {           
+        btn1.addEventListener('click', (e) => {     
+            if (playerScore<5 && computerScore<5){      
             playRound('rock', computerSelection())
-        })
+        }})
     
     
 
         const btn2 = document.querySelector('#btn2')
         btn2.addEventListener('click', (e) => {
+            if (playerScore<5 && computerScore<5){ 
             playRound('paper', computerSelection())
-        })
+        }})
 
         const btn3 = document.querySelector('#btn3')
         btn3.addEventListener('click', (e) => {
+            if (playerScore<5 && computerScore<5){ 
             playRound('scissors', computerSelection())
 
-        })
+        }})
 
 const div = document.createElement('div');
 container.appendChild(div)
